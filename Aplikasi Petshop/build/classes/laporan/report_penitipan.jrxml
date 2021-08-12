@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="dc4f6e8a-4b86-4076-8e67-b2a93aa8f704">
+	<property name="ireport.zoom" value="1.3310000000000006"/>
+	<property name="ireport.x" value="190"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="tgl1" class="java.util.Date">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="tgl2" class="java.util.Date">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select
+data_penitipan.`id` AS id,
+data_penitipan.`id_transaksi` AS id_transaksi,
+data_penitipan.`id_pelanggan` AS id_pelanggan,
+data_penitipan.`jenis_layanan` AS jenis_layanan,
+data_penitipan.`tanggal_masuk` AS tanggal_masuk,
+data_penitipan.`tanggal_keluar` AS tanggal_keluar,
+data_penitipan.`lama_penitipan` AS lama_penitipan,
+data_penitipan.`nama_kucing` AS nama_kucing,
+data_penitipan.`no_kandang` AS no_kandang,
+data_penitipan.`nama_paket` AS nama_paket,
+data_penitipan.`sub_total` AS sub_total
+
+from `data_penitipan`data_penitipan
+where data_penitipan.`tanggal_masuk` between $P{tgl1} and $P{tgl2}]]>
+	</queryString>
+	<field name="id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_transaksi" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_pelanggan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jenis_layanan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tanggal_masuk" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tanggal_keluar" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="lama_penitipan" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_kucing" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="no_kandang" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama_paket" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="sub_total" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="60" splitType="Stretch">
+			<image>
+				<reportElement uuid="bc4bc724-9316-4a55-afc7-98e4b245e35b" x="51" y="1" width="59" height="59"/>
+				<imageExpression><![CDATA["D:\\images.jpg"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement uuid="b292d76f-4e30-4d40-9b40-a456451add43" x="265" y="7" width="222" height="33"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Fresca" size="24"/>
+				</textElement>
+				<text><![CDATA[ORION PETHSHOP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="532772d2-5d77-4fe7-87be-6472ecbac000" x="158" y="40" width="467" height="20"/>
+				<textElement>
+					<font fontName="Fresca" size="17"/>
+				</textElement>
+				<text><![CDATA[JL.KEBON AGUNG, KM 4.5, CEBONG,TLOGOADI,MLATI, SLEMAN, YOGYAKARTA]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="afdf86a1-c129-49c4-9526-8924761537b2" x="0" y="59" width="802" height="1"/>
+				<graphicElement>
+					<pen lineWidth="3.0"/>
+				</graphicElement>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<textField>
+				<reportElement uuid="72277a50-fc5a-47b6-ab56-e68a49d5b66c" x="260" y="7" width="100" height="20"/>
+				<textElement>
+					<font fontName="Fresca" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{tgl1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="b33bde0c-e737-444b-974c-fd26556c67bd" x="447" y="7" width="100" height="20"/>
+				<textElement>
+					<font fontName="Fresca" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{tgl2}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="85f4c101-e93c-4388-afde-994d0b4cc9e0" x="360" y="7" width="100" height="20"/>
+				<textElement>
+					<font fontName="Fresca" size="12"/>
+				</textElement>
+				<text><![CDATA[Sampai Tanggal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="6ea5e123-7160-44d7-af2e-6efeb0fcc07b" x="188" y="7" width="100" height="20"/>
+				<textElement>
+					<font fontName="Fresca" size="12"/>
+				</textElement>
+				<text><![CDATA[Dari Tanggal]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="c2d42c2d-4376-42ba-830e-13387792ff89" x="195" y="0" width="70" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="0355e978-8d7f-44ad-9b0f-e39d05f50cf9" x="123" y="0" width="72" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="4b3d59c0-da12-4f0d-83c2-20d7457aa7e8" x="51" y="0" width="72" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="dc5a1974-219b-40cf-8958-3a72b34ac667" x="0" y="0" width="51" height="20"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="c5f9bc00-33fd-4efc-881b-5b9ec7b4dcbd" x="5" y="0" width="34" height="20"/>
+				<textElement>
+					<font fontName="Fresca" size="12"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="244ed585-4f6b-43da-80fd-143f3e709faf" x="123" y="0" width="72" height="20"/>
+				<textElement>
+					<font fontName="Fresca" size="12"/>
+				</textElement>
+				<text><![CDATA[   ID Pelanggan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="af42ec78-9805-43ad-a1b1-29d434118c0e" x="195" y="0" width="72" height="20"/>
+				<textElement>
+					<font fontName="Fresca" size="12"/>
+				</textElement>
+				<text><![CDATA[     Layanan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="092f833c-8ecc-4325-b2f1-58058942cee2" x="51" y="0" width="72" height="20"/>
+				<textElement>
+					<font fontName="Fresca" size="12"/>
+				</textElement>
+				<text><![CDATA[   ID Transaksi]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="79817e04-0e8c-4a6c-9216-da1bcc878b75" x="265" y="0" width="74" height="20"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="eaf31cb5-d0c9-4ea2-a7c5-31a096c622a5" x="267" y="0" width="72" height="20"/>
+				<textElement>
+					<font fontName="Fresca" size="12"/>
+				</textElement>
+				<text><![CDATA[Tanggal Masuk]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="051dcf02-6b0c-4ad3-b7b1-5451029edd1f" x="339" y="0" width="74" height="20"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="25950106-e8e2-4072-95e5-323ae8143bc2" x="339" y="0" width="51" height="20"/>
+				<textElement>
+					<font fontName="Fresca" size="12"/>
+				</textElement>
+				<text><![CDATA[Tanggal Keluar]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="e00ceb2d-bcce-40c1-b903-7c56e2215976" x="413" y="0" width="91" height="20"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="f47b8283-d041-45b4-adbd-d2f10154499e" x="413" y="0" width="91" height="20"/>
+				<textElement>
+					<font fontName="Fresca" size="12"/>
+				</textElement>
+				<text><![CDATA[   Lama Penitipan]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="9f3ecf71-0b02-453d-a351-a12a347571cd" x="504" y="0" width="72" height="20"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="b339d054-8f66-4fb3-8738-8f67b62b7359" x="504" y="0" width="72" height="20"/>
+				<textElement>
+					<font fontName="Fresca" size="12"/>
+				</textElement>
+				<text><![CDATA[  Nama Kucing]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="ed2d5ee8-7515-42f9-bf87-3a2e9c2008da" x="576" y="0" width="72" height="20"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="c000943e-86b8-44f3-9592-1bc8d15ed084" x="576" y="0" width="72" height="20"/>
+				<textElement>
+					<font fontName="Fresca" size="12"/>
+				</textElement>
+				<text><![CDATA[   No Kandang]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="95e71d55-86ff-451d-856b-79aeb82c9626" x="648" y="0" width="72" height="20"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="abcc25f6-afee-4094-a376-f2c91875f242" x="648" y="0" width="72" height="20"/>
+				<textElement>
+					<font fontName="Fresca" size="12"/>
+				</textElement>
+				<text><![CDATA[      Paket]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement uuid="3fa97672-30a8-4a1e-a9a5-cc92fd4586de" x="720" y="0" width="72" height="20"/>
+			</rectangle>
+			<staticText>
+				<reportElement uuid="a6806137-8bb8-433c-94cf-35f8c344bfa9" x="720" y="0" width="72" height="20"/>
+				<textElement>
+					<font fontName="Fresca" size="12"/>
+				</textElement>
+				<text><![CDATA[     Sub Total]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<rectangle>
+				<reportElement uuid="29701c88-4f0a-4067-b2a7-60ad36a7e8ef" x="123" y="0" width="72" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="29701c88-4f0a-4067-b2a7-60ad36a7e8ef" x="51" y="0" width="72" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="29701c88-4f0a-4067-b2a7-60ad36a7e8ef" x="0" y="0" width="51" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="29701c88-4f0a-4067-b2a7-60ad36a7e8ef" x="195" y="0" width="70" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="29701c88-4f0a-4067-b2a7-60ad36a7e8ef" x="265" y="0" width="74" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="29701c88-4f0a-4067-b2a7-60ad36a7e8ef" x="339" y="0" width="74" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="29701c88-4f0a-4067-b2a7-60ad36a7e8ef" x="413" y="0" width="91" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="29701c88-4f0a-4067-b2a7-60ad36a7e8ef" x="720" y="0" width="72" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="29701c88-4f0a-4067-b2a7-60ad36a7e8ef" x="648" y="0" width="72" height="20"/>
+			</rectangle>
+			<rectangle>
+				<reportElement uuid="29701c88-4f0a-4067-b2a7-60ad36a7e8ef" x="576" y="0" width="72" height="20"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="9abc4d05-de25-4119-a6fa-86c5daafbfee" x="5" y="0" width="39" height="20"/>
+				<textElement>
+					<font fontName="Fresca" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="a7e03de5-8bb4-4b5a-8beb-3f58c270d9d3" x="61" y="0" width="62" height="20"/>
+				<textElement>
+					<font fontName="Fresca" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id_transaksi}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d338657a-9647-4568-b8a5-3630192dcdf3" x="205" y="0" width="60" height="20"/>
+				<textElement>
+					<font fontName="Fresca" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{jenis_layanan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="de720640-0467-4264-ba36-82129090b9e7" x="267" y="0" width="72" height="20"/>
+				<textElement>
+					<font fontName="Fresca" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tanggal_masuk}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="a0588a4d-968f-4209-b448-d4290ccf86dd" x="339" y="0" width="74" height="20"/>
+				<textElement>
+					<font fontName="Fresca" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tanggal_keluar}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="d0ff3d26-786d-48a3-9b26-dd93814fb521" x="425" y="0" width="62" height="20"/>
+				<textElement>
+					<font fontName="Fresca" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{lama_penitipan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="c1f26751-7acd-4f60-a18b-6f143db9982b" x="587" y="0" width="61" height="20"/>
+				<textElement>
+					<font fontName="Fresca" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{no_kandang}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="64db0f5d-b184-4521-a522-76bed5ad330f" x="663" y="0" width="57" height="20"/>
+				<textElement>
+					<font fontName="Fresca" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nama_paket}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="be139dde-3a71-4e29-a7e5-710e0133cb51" x="734" y="0" width="58" height="20"/>
+				<textElement>
+					<font fontName="Fresca" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sub_total}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement uuid="29701c88-4f0a-4067-b2a7-60ad36a7e8ef" x="504" y="0" width="72" height="20"/>
+			</rectangle>
+			<textField>
+				<reportElement uuid="9cd0fa6e-c970-4727-a9ba-175a31cd98ac" x="514" y="0" width="62" height="20"/>
+				<textElement>
+					<font fontName="Fresca" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nama_kucing}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="3dee3d05-67cc-475f-9087-a1ceb1d7f17b" x="130" y="0" width="65" height="20"/>
+				<textElement>
+					<font fontName="Fresca" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id_pelanggan}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
